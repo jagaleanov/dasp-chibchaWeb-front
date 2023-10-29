@@ -5,13 +5,13 @@ const devDomain = 'chibchaweb.com';
 const devPort = 8082;
 
 // Configuración para producción (ajusta estos valores según tus necesidades)
-const prodDomain = 'jagaleanov.github.io/dasp-chibchaWeb/';
+const prodDomain = 'jagaleanov.github.io/dasp-chibchaWeb-front/';
 const prodPort = 8080;
 
 const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = defineConfig({
-  publicPath: isProduction ? '/dasp-chibchaWeb/' : '/',
+  publicPath: isProduction ? '/dasp-chibchaWeb-front/' : '/',
   transpileDependencies: true,
   devServer: {
     host: isProduction ? prodDomain : devDomain,
