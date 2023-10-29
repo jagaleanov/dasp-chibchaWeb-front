@@ -16,6 +16,9 @@ git init
 git add -A
 git commit -m 'deploy'
 
+# Set the branch to main
+git branch -M main
+
 # if you are deploying to https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
 
@@ -23,9 +26,3 @@ git commit -m 'deploy'
 git push -f git@github.com:jagaleanov/dasp-chibchaWeb-front.git main:gh-pages
 
 cd -
-
-
-
-# me gusta coleccionar plantas y entre ellas prefiero las carnivoras
-# me va bien en matematicas y pasé todos los calculos de una sola
-# suelo tocar varios instrumentos: la guitarra, el bajo y el piano
