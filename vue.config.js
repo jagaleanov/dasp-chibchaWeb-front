@@ -2,7 +2,7 @@ const { defineConfig } = require('@vue/cli-service');
 
 // Configuración para desarrollo
 const devDomain = 'chibchaweb.com';
-const devPort = 8082;
+const devPort = 8080;
 
 // Configuración para producción (ajusta estos valores según tus necesidades)
 const prodDomain = 'jagaleanov.github.io/dasp-chibchaWeb-front/';
