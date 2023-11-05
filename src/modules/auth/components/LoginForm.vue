@@ -26,15 +26,40 @@
 </template>
 
 <script>
+import authApi from '@/modules/auth/api/authApi.js'
 import MainNavbar from '@/components/MainNavbar.vue';
 export default {
     data() {
         return {
-
+            formData: {
+                email: '',
+                password: ''
+            }
         }
     },
     components: {
         MainNavbar
     },
+    methods: {
+        async loginSubmit() {
+            let formData={email:this.form.email,password:this.password}
+            const { data } = await authApi.login(formData)
+            if (data.status == "success") {
+                let token = data.data.token;
+                localStorage.setItem("token", token);
+                /*for (let id of Object.keys(data.data)) {
+                    users.push({
+                        id,
+                        ...data.data[id]
+                    })
+                }*/
+            } else {
+                console.error("Error en el incio de sesion: ",data.message);
+            }
+        }
+    },
 };
+
+
+
 </script>

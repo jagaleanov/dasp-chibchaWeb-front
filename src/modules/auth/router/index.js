@@ -1,4 +1,4 @@
-import LoginForm from '@/modules/auth/component/LoginForm.vue';
+import LoginForm from '@/modules/auth/components/LoginForm.vue';
 
 export default {
   path: '/login',

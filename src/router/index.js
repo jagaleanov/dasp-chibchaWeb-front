@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import usersRouter from '@/modules/user/router'
+import authRouter from '@/modules/auth/router'
 
 const routes = [
   {
@@ -11,7 +12,11 @@ const routes = [
   {
     path: '/users',
     ...usersRouter
-  }
+  },
+  {
+    path: '/auth',
+    ...authRouter
+  },
 ]
 
 const router = createRouter({
