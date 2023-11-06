@@ -1,23 +1,24 @@
 <template>
-    <MainNavbar />
+    <MainNavbar /> <!-- Componente de navegación superior -->
     <div>
         <div class="card" id="container">
             <div class="card" id="card">
-                <h2 class="mt-2">Login</h2>
-                <hr>
+                <h2 class="mt-2">Login</h2> <!-- Título "Login" -->
+                <hr> <!-- Línea horizontal -->
                 <div class="avatar" alt="C:\Users\Admin\Documents\chibchaweb\dasp-chibchaWeb\spa\src\assets\logo.png">
-                </div>
+                </div> <!-- Elemento para mostrar un avatar -->
                 <form @submit="loginSubmit(formData)" id="formulario">
                     <div class="mb-3" id="email-space">
                         <label class="form-label">Email address</label>
+                        <!-- Etiqueta para el campo de correo electrónico -->
                         <input v-model="email" type="email" class="form-control" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Password</label>
+                        <label class="form-label">Password</label> <!-- Etiqueta para el campo de contraseña -->
                         <input v-model="password" type="password" class="form-control">
                     </div>
-                    <button type="submit" class="btn btn-primary" id="login">Log in</button>
-                    <button type="reset" class="btn btn-secondary" id="signup">sign up</button>
+                    <button type="submit" class="btn btn-primary" id="login">Log in</button> <!-- Botón para iniciar sesión -->
+                    <button type="reset" class="btn btn-secondary" id="signup">sign up</button> <!-- Botón para registrarse -->
                 </form>
             </div>
         </div>
@@ -25,8 +26,8 @@
 </template>
 
 <script>
-import authApi from '@/modules/auth/api/authApi.js';
-import MainNavbar from '@/components/MainNavbar.vue';
+import authApi from '@/modules/auth/api/authApi.js'; // Importa el módulo de autenticación
+import MainNavbar from '@/components/MainNavbar.vue'; // Importa el componente de la barra de navegación principal
 export default {
     data() {
         return {
@@ -42,20 +43,20 @@ export default {
     methods: {
         async loginSubmit(formData) {
             const { email, password } = formData;
-            const { data } = await authApi.login({ email, password });
+            const { data } = await authApi.login({ email, password }); // Llama a la función de inicio de sesión y obtiene la respuesta
 
             if (data.status == "success") {
-                let token = data.data.token;
-                localStorage.setItem("token", token);
-                this.$router.push("/users/users");
+                let token = data.data.token; // Extrae el token de la respuesta exitosa
+                localStorage.setItem("token", token); // Almacena el token en el almacenamiento local
+                //this.$router.push("/users/users"); // Redirige a la página de usuarios después del inicio de sesión exitoso
             } else {
-                console.error("Error en el incio de sesion: ", data.message);
+                console.error("Error en el incio de sesion: ", data.message); // Muestra un mensaje de error en caso de inicio de sesión fallido
             }
         }
     },
 };
-
 </script>
+
 
 <style>
 :root {
@@ -70,7 +71,6 @@ export default {
 
 
 #background-login {
-    background-color: #0000004f;
     height: 0px;
     width: 0px;
 }
@@ -79,7 +79,6 @@ export default {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #0000004f;
     background-image: url("@/assets/fondo.jpg");
     background-size: contain;
     background-position: 0%;
@@ -116,6 +115,10 @@ button {
     margin-inline: 5%;
 }
 
+.mt-2 {
+    font-weight: bold;
+}
+
 #login {
     background-color: var(--background-purple-darck);
     color: var(--background-oscuro);
@@ -137,7 +140,7 @@ button {
 .avatar {
     position: relative;
     background-color: var(--background-purple-darck);
-    background-image: url('C:\Users\Admin\Documents\chibchaweb\dasp-chibchaWeb\spa\src\assets\logo.png');
+    background-image: url("@/assets/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 150px;
