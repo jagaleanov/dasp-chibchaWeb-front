@@ -1,8 +1,8 @@
 
-import UsersLayout from '@/modules/user/layouts/UsersLayout.vue';
-import UsersTable from '@/modules/user/components/UsersTable.vue';
-import UserDetails from '@/modules/user/components/UserDetails.vue';
-import UsersForm from '@/modules/user/components/UserForm.vue';
+import UsersLayout from '@/modules/users/layouts/UsersLayout.vue';
+import UsersTable from '@/modules/users/components/UsersTable.vue';
+import UserDetails from '@/modules/users/components/UserDetails.vue';
+import UsersForm from '@/modules/users/components/UserForm.vue';
 export default {
   name: 'users',
   path: '/users',

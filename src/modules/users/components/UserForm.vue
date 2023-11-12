@@ -36,7 +36,7 @@
 
 <script>
 import { mapGetters, mapActions, mapState } from 'vuex'
-import usersApi from '@/modules/user/api/usersApi'
+import usersApi from '@/modules/users/api/usersApi'
 export default {
   props: {
     id: {

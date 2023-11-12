@@ -1,4 +1,4 @@
-import usersApi from '@/modules/user/api/usersApi'
+import usersApi from '@/modules/users/api/usersApi'
 
 export const loadUsers = async ({ commit }) => {
     const { data } = await usersApi.loadUsers()
@@ -16,17 +16,8 @@ export const loadUsers = async ({ commit }) => {
 
 export const loadUser = async ({ commit }, id) => {
     const { data } = await usersApi.loadUser(id)
-    let user = {
-        id: null,
-        name: null,
-        last_name: null,
-        email: null,
-        password: null,
-        created_at: null,
-        updated_at: null,
-    }
     if (data.status == "success") {
-        user = data.data
+        const user = data.data
         commit('setUser', user)
     }
 }

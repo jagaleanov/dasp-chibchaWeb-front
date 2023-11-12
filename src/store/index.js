@@ -1,9 +1,15 @@
 import { createStore } from 'vuex'
-import users from '../modules/user/store'
+import auth from '../modules/auth/store'
+import users from '../modules/users/store'
+import customers from '../modules/customers/store'
+import employees from '../modules/employees/store'
 
 const store = createStore({
     modules: {
-        users
+        users,
+        customers,
+        employees,
+        auth
     }
 })
 
