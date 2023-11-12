@@ -1,13 +1,15 @@
 <template>
-    <div>
+    <div id="component-navBar">
         <!-- Barra de navegación de Bootstrap -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navBar">
+            <div class="container-fluid" id="list">
 
                 <!-- Logo del sitio con ícono -->
-                <a id="dynamicDomainLink" class="navbar-brand border rounded px-2" :href="baseUrl"><i
-                        class="bi bi-globe2"></i>
-                    ChibchaWeb</a>
+                <a id="dynamicDomainLink" class="navbar-brand border rounded px-2" :href="baseUrl">
+                    <img src="@/assets/logo.png" alt="ChibchaWeb Logo" id="logo">
+                    ChibchaWeb
+                </a>
+
 
                 <!-- Botón de hamburguesa para menús en dispositivos móviles -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
@@ -17,7 +19,7 @@
 
                 <!-- Menú principal de navegación -->
                 <div class="collapse navbar-collapse" id="mainNavbar">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav" id="list-container">
                         <li class="nav-item">
                             <a class="nav-link" :href="`${baseUrl}/#/users/list`">
                                 <i class="bi bi-person-square"></i> Usuarios
@@ -75,3 +77,43 @@ export default {
     }
 }
 </script>
+
+<style>
+:root {
+    --background-oscuro: #182b3a;
+    --background-claro: #def5e9;
+    --background-purple-medium: #cdccb3;
+    --background-purple-darck: #00e04a;
+    --background-purple-claro: #afbd86;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#dynamicDomainLink {
+    background-color: var(--background-oscuro);
+    background-size: contain;
+    background-position: 0%;
+    font-family: 'Quicksand', sans-serif;
+    padding: 5px;
+}
+
+#list-container {
+    color: var(--background-purple-darck);
+}
+
+#logo {
+    margin-right: 1%;
+    height: 33px; 
+    width: 33px;
+}
+
+.nav-link{
+    color: var(--background-purple-medium);
+}
+
+.nav-link :hover{
+    color: var(--background-purple-darck);
+}
+
+
+
+</style>

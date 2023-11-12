@@ -5,7 +5,7 @@
             <div class="card" id="card">
                 <h2 class="mt-2">Login</h2> <!-- Título "Login" -->
                 <hr> <!-- Línea horizontal -->
-                <div class="avatar" alt="C:\Users\Admin\Documents\chibchaweb\dasp-chibchaWeb\spa\src\assets\logo.png">
+                <div class="avatar" alt="@/assets/logo.png">
                 </div> <!-- Elemento para mostrar un avatar -->
                 <form @submit="loginSubmit(formData)" id="formulario">
                     <div class="mb-3" id="email-space">
@@ -17,9 +17,10 @@
                         <label class="form-label">Password</label> <!-- Etiqueta para el campo de contraseña -->
                         <input v-model="password" type="password" class="form-control">
                     </div>
-                    <button type="submit" class="btn btn-primary" id="login">Log in</button> <!-- Botón para iniciar sesión -->
-                    <button type="reset" class="btn btn-secondary" id="signup">sign up</button> <!-- Botón para registrarse -->
+                    <button type="submit" class="btn btn-primary" id="login">Log in</button>
+                    <!-- Botón para iniciar sesión -->
                 </form>
+                <!-- <button type="reset" class="btn btn-secondary" id="signup">sign up</button> Botón para registrarse -->
             </div>
         </div>
     </div>
@@ -139,7 +140,7 @@ button {
 
 .avatar {
     position: relative;
-    background-color: var(--background-purple-darck);
+    background-color: var(--background-oscuro);
     background-image: url("@/assets/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
