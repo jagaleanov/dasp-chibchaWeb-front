@@ -4,9 +4,14 @@ export const getStatus = (state) => {
 export const getUser = (state) => {
     return state.user
 }
-export const getIdToken = (state) => {
-    return state.idToken
+export const getRole = (state) => {
+    // Comprueba si 'role' existe y si tiene una propiedad 'name'
+    if (state.role && 'name' in state.role) {
+        return state.role.name;
+    }
+    return 'public';
 }
-export const getRefreshToken = (state) => {
-    return state.refreshToken
+
+export const getToken = (state) => {
+    return state.token
 }

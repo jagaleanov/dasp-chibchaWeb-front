@@ -8,6 +8,7 @@ export default () => ({
         last_name: null,
         email: null,
         password: null,
+        address: null,
         created_at: null,
         updated_at: null,
     }

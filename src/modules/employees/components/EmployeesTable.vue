@@ -4,7 +4,7 @@
       <h4 class="modal-title mb-1">Listado</h4>
       <nav class="nav justify-content-end mb-3">
         <router-link to="/employees/new" class="btn btn-outline-primary">
-          <i class="bi bi-person"></i> Nuevo usuario
+          <i class="bi bi-person"></i> Nuevo empleado
         </router-link>
       </nav>
       <router-view></router-view>

@@ -4,7 +4,7 @@
       <h4 class="modal-title mb-1">Listado</h4>
       <nav class="nav justify-content-end mb-3">
         <router-link to="/customers/new" class="btn btn-outline-primary">
-          <i class="bi bi-person"></i> Nuevo usuario
+          <i class="bi bi-person"></i> Nuevo cliente
         </router-link>
       </nav>
       <router-view></router-view>
@@ -31,7 +31,8 @@
                 class="btn btn-primary btn-sm ms-1 mb-1">
                 <i class="bi bi-pencil-square" title="Editar usuario"></i>
               </button>
-              <button @click="$router.push(`/customers/${customer.id}`)" type="button" class="btn btn-primary btn-sm ms-1 mb-1">
+              <button @click="$router.push(`/customers/${customer.id}`)" type="button"
+                class="btn btn-primary btn-sm ms-1 mb-1">
                 <i class="bi bi-eye" title="Ver detalles"></i>
               </button>
             </td>
@@ -47,9 +48,9 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
+
 <script>
 import { mapGetters, mapActions, mapState } from 'vuex'
 export default {
@@ -62,7 +63,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions('customers', ['loadCustomers'])
+    ...mapActions('customers', ['loadCustomers']),
   },
   computed: {
     ...mapGetters('customers', ['getCustomers']),
