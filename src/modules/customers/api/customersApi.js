@@ -34,6 +34,13 @@ export default {
     },
 
     /*
+      POST     orders
+    */
+    createOrder: function (data) {
+        return axios.post(`${SPA_CONFIG.API_URL}/orders`, data)
+    },
+
+    /*
       PUT     customers/id
     */
     editCustomer: function (id, data) {
@@ -59,5 +66,19 @@ export default {
     */
     loadPaymentPlans: function () {
         return axios.get(`${SPA_CONFIG.API_URL}/payment-plans`)
+    },
+
+    /*
+      GET     validateCreditCard
+    */
+    validateCreditCard: function (number) {
+        return axios.get(`${SPA_CONFIG.API_URL}/credit-cards/${number}`)
+    },
+
+    /*
+      GET     getAmount
+    */
+      getAmount: function (hosting_plan_id,operative_system_id,payment_plan_id) {
+        return axios.get(`${SPA_CONFIG.API_URL}/orders/amount/${hosting_plan_id}/${operative_system_id}/${payment_plan_id}`)
     },
 }

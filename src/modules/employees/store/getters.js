@@ -5,3 +5,7 @@ export const getEmployees = (state) => {
 export const getEmployee = (state) => {
     return state.employee
 }
+
+export const getRoles = (state) => {
+    return state.roles
+}

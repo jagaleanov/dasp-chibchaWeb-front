@@ -5,6 +5,7 @@
         <strong>Nombre:</strong> {{ getEmployee.name }}<br>
         <strong>Apellido:</strong> {{ getEmployee.last_name }}<br>
         <strong>Correo electrónico:</strong> {{ getEmployee.email }}<br>
+        <strong>Celular:</strong> {{ getEmployee.mobile_phone }}<br>
         <strong>Fecha de registro:</strong> {{ getEmployee.created_at }}<br>
         <strong>Fecha de actualización:</strong> {{ getEmployee.updated_at }}
     </div>

@@ -19,3 +19,15 @@ export const setCustomer = (state, customer) => {
     }
     state.customerIsLoading = false
 }
+
+export const setHostPlans = (state, hostPlans) => {
+    state.hostPlans = [...state.hostPlans, ...hostPlans]
+}
+
+export const setOperativeSystems = (state, operativeSystems) => {
+    state.operativeSystems = [...state.operativeSystems, ...operativeSystems]
+}
+
+export const setPaymentPlans = (state, paymentPlans) => {
+    state.paymentPlans = [...state.paymentPlans, ...paymentPlans]
+}

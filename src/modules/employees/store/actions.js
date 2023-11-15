@@ -22,3 +22,17 @@ export const loadEmployee = async ({ commit }, id) => {
     }
 }
 
+export const loadRoles = async ({ commit }) => {
+    const { data } = await employeesApi.loadRoles()
+    const roles = []
+    if (data.status == "success") {
+        for (let id of Object.keys(data.data)) {
+            roles.push({
+                id,
+                ...data.data[id]
+            })
+        }
+        commit('setRoles', roles)
+    }
+}
+

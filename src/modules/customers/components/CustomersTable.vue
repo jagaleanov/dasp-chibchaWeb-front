@@ -3,9 +3,6 @@
     <div>
       <h4 class="modal-title mb-1">Listado</h4>
       <nav class="nav justify-content-end mb-3">
-        <router-link to="/customers/new" class="btn btn-outline-primary">
-          <i class="bi bi-person"></i> Nuevo cliente
-        </router-link>
       </nav>
       <router-view></router-view>
       <table v-if="!customersAreLoading" class="table table-striped">

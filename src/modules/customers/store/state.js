@@ -11,5 +11,8 @@ export default () => ({
         address: null,
         created_at: null,
         updated_at: null,
-    }
+    },
+    operativeSystems: [],
+    paymentPlans: [],
+    hostPlans: [],
 })

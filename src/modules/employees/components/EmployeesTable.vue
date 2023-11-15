@@ -15,6 +15,7 @@
             <th scope="col">Nombre</th>
             <th scope="col">Apellido</th>
             <th scope="col">Correo electrónico</th>
+            <th scope="col">Celular</th>
             <th scope="col">Fecha de registro</th>
             <th scope="col">Acciones</th>
           </tr>
@@ -25,6 +26,7 @@
             <td>{{ employee.name }}</td>
             <td>{{ employee.last_name }}</td>
             <td>{{ employee.email }}</td>
+            <td>{{ employee.mobile_phone }}</td>
             <td>{{ employee.created_at }}</td>
             <td>
               <button @click="$router.push(`/employees/${employee.id}/edit`)" type="button"
